@@ -5,6 +5,12 @@ body {
   background-color: #F5F3EF;
 }
 
+h1 {
+  font-weight: 500px;
+  font-size: 64px;
+  font-family: serif;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -40,4 +46,10 @@ header {
   background-color: #000000;
   padding: 10px;
   border-radius: 15px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 20px;
 }
