@@ -79,6 +79,7 @@ header {
                         "card-four card-five card-six";
 gap: 40px;
 justify-items: center;
+margin-top: 120px;
 margin-bottom: 200px;
 
 }
@@ -90,10 +91,10 @@ margin-bottom: 200px;
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
   text-align: left;
-  padding: 100px;
+  padding: 40px;
   border-radius: 40px;
-  height: 300px;
-  width: 250px;
+  height: 324px;
+  width: 400px;
   font-size: 40px;
   font-weight: 500px;
 }
@@ -128,10 +129,46 @@ margin-bottom: 200px;
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
   text-align: left;
-  background-color: aliceblue;
-  padding: 100px;
+  background-color: white;
+  padding: 40px;
   border-radius: 40px;
-  height: 300px;
-  width: 250px;
+  height: 324px;
+  width: 400px;
 }
 
+.button {
+  background-color: white;
+  padding: 10px 25px;
+  text-align: left;
+  height: 30px;
+  width: 80px;
+  border-radius: 40px;
+  border: 1px solid lightgray;
+}
+
+.heading-h3 {
+  font-size: 24px;
+  font-family: Roboto Serif;
+}
+
+.para {
+ color: #646464;
+}
+
+footer {
+  background-color: #FEBD2F;
+  height: 80px;
+  width: 100%;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin-top: 20px;
+}
+
+.logo {
+  margin-top: 20px;
+}
