@@ -82,13 +82,11 @@ justify-items: center;
 margin-top: 120px;
 margin-bottom: 200px;
 z-index: -1;
-
 }
 
 .card-1 {
   grid-area: card-one;
   background-color: #FEBD2F;
-  display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
   text-align: left;
@@ -98,6 +96,8 @@ z-index: -1;
   width: 400px;
   font-size: 40px;
   font-weight: 500px;
+  display: flex;
+  flex-shrink: 1;
 }
 
 .card-2 {
