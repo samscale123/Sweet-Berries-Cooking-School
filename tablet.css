@@ -1,8 +1,126 @@
-.container {
-    width: 95%;
-    margin: 0 auto;
+html,
+body {
+    width: 768px;
+    margin-left: 20%;
+    height: 100%;
+
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.main-container {
+
+background-color: #F5F3EF;
+padding: 10px;
+
+}
+
+
+
+
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+.header-container a:nth-child(4) {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border-radius: 15px;
+}
+
+.main-h {
+    font-size: 48px;
+    text-align: center;
+    font-weight: 500px;
+}
+.banner p:nth-child(2) {
+    text-align: center;
+    color: #646464;
+}
+
+.banner img:nth-child(3) {
+    width: 80%;
+    margin-top: 10px;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "card-1 card-2"
+    "card-3 card-4"
+    "card-5 card-6";
+    margin-top: 50px;
+    margin-bottom: 10%;
+    gap: 10px;
+}
+
+.card-1 {
+grid-area: card-1;
+background-color: #FEBD2F;
+border-radius: 20px;
+padding: 10px;
+}
+.card-2 {
+grid-area: card-2;
+}
+.card-3 {
+grid-area: card-3;
+}
+.card-4 {
+grid-area: card-4;
+}
+.card-5 {
+grid-area: card-5;
+}
+.card-6 {
+grid-area: card-6;
+}
+
+.card-2,
+.card-3,
+.card-4,
+.card-5,
+.card-6 {
+    background-color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.button {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 0px 30px;
+    width: 40px;
+    font-size: 16px;
+    margin-left: 7%;
+    text-align: center;
+}
+
+.footer {
+    background-color: #FEBD2F;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
 }
