@@ -1,3 +1,9 @@
+:root {
+    --background-color: #F5F3EF;
+    --yellow: #FEBD2F;
+    --card-backgroung: #FFFFFF;
+  }
+
 html,
 body {
     width: 768px;
@@ -13,9 +19,8 @@ body {
 
 .main-container {
 
-background-color: #F5F3EF;
+background-color: var(--background-color);
 padding: 10px;
-
 }
 
 
@@ -99,7 +104,7 @@ text-align: center;
 
 .card-1 {
 grid-area: card-1;
-background-color: #FEBD2F;
+background-color: var(--yellow);
 border-radius: 20px;
 padding: 10px;
 }
@@ -141,7 +146,7 @@ grid-area: card-6;
 }
 
 .footer {
-    background-color: #FEBD2F;
+    background-color: var(--yellow);
     height: 10%;
     display: flex;
     justify-content: center;
