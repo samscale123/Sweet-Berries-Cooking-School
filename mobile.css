@@ -11,17 +11,20 @@ a {
 
 html,
 body {
-    background-color: var(--background-color);
-    width: 300px;
+    width: 400px;
     margin-left: 35%;
-    height: 2
-    000px;
+    height: 2000px;
+}
+
+.container {
+    background-color: var(--background-color);
+    width: 90%;
 }
 
 .body-grid-container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 500px);
-    background-color: aliceblue;
+    background-color: var(--background-color);
     grid-template-areas: "card-1"
     "card-2"
     "card-3"
@@ -72,10 +75,11 @@ background-color: var(--yellow);
 
 .footer {
     background-color: var(--yellow);
-    height: 30%;
+    height: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10%;
 }
 
 .footer-logo {
