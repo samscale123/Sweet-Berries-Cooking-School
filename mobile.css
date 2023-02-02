@@ -14,15 +14,15 @@ body {
     width: 400px;
     margin-left: 35%;
     height: 2000px;
+
 }
 
 .container {
-    background-color: var(--background-color);
     width: 90%;
+    background-color: var(--background-color);
 }
 
 .body-grid-container {
-    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 500px);
     background-color: var(--background-color);
     grid-template-areas: "card-1"
@@ -33,14 +33,13 @@ body {
     "card-6";
 }
 
-
-
 .main-image {
     width: 100%;
 }
 
 .card-1 {
-background-color: var(--yellow);
+background-color: white;
+border-radius: 20px;
 }
 
 .card-2,
@@ -48,12 +47,15 @@ background-color: var(--yellow);
 .card-4,
 .card-5,
 .card-6 {
-    background-color: var(--card-backgroung);
+    background-color: white;
+    display: grid;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 20px;
 }
 
-.button {
-    border: solid 0.5px lightgray;
-}
+
+
 .card-1 {
     grid-area: card-1;
 }
@@ -71,6 +73,14 @@ background-color: var(--yellow);
 }
 .card-6 {
     grid-area: card-6;
+}
+
+.button {
+    border: solid lightgray 0.5px;
+    width: 30%;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    margin-left: 3%;
 }
 
 .footer {
