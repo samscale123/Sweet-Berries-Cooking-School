@@ -28,17 +28,41 @@ a {
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: "courses about logo logo get-started";
+    justify-items: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
 }
 
-.header-container a:nth-child(4) {
-    background-color: black;
-    color: white;
-    padding: 12px;
-    border-radius: 15px;
+.courses {
+    grid-area: courses;
+    margin-right: 20px;
+}
+
+.about {
+    grid-area: about;
+}
+
+.logo {
+    grid-area: logo;
+    justify-items: center;
+    margin-right: 60%;
+    column-span: 2;
+}
+
+.get-started {
+    grid-area: get-started;
+}
+
+.header-container a:nth-child(3){
+background-color: black;
+color: white;
+padding: 5px 20px 5px 20px;
+border-radius: 20px;
+text-align: center;
 }
 
 .main-h {
