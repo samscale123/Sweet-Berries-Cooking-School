@@ -1,0 +1,84 @@
+:root {
+    --background-color: #F5F3EF;
+    --yellow: #FEBD2F;
+    --card-backgroung: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+html,
+body {
+    background-color: var(--background-color);
+    width: 300px;
+    margin-left: 35%;
+    height: 2
+    000px;
+}
+
+.body-grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 500px);
+    background-color: aliceblue;
+    grid-template-areas: "card-1"
+    "card-2"
+    "card-3"
+    "card-4"
+    "card-5"
+    "card-6";
+}
+
+
+
+.main-image {
+    width: 100%;
+}
+
+.card-1 {
+background-color: var(--yellow);
+}
+
+.card-2,
+.card-3,
+.card-4,
+.card-5,
+.card-6 {
+    background-color: var(--card-backgroung);
+}
+
+.button {
+    border: solid 0.5px lightgray;
+}
+.card-1 {
+    grid-area: card-1;
+}
+.card-2 {
+    grid-area: card-2;
+}
+.card-3 {
+    grid-area: card-3;
+}
+.card-4 {
+    grid-area: card-4;
+}
+.card-5 {
+    grid-area: card-5;
+}
+.card-6 {
+    grid-area: card-6;
+}
+
+.footer {
+    background-color: var(--yellow);
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    height: 25px;
+    width: auto;
+}
