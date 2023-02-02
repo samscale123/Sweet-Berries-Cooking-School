@@ -1,8 +1,14 @@
+:root {
+  --background-color: #F5F3EF;
+  --yellow: #FEBD2F;
+  --card-backgroung: #FFFFFF;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #F5F3EF;
+  background-color: var(--background-color);
 }
 
 h1 {
@@ -78,8 +84,6 @@ margin-left: 0px;
   margin-left: 200px;
 }
 
-
-
 .card-container {
   margin-top: 100px;
   display: grid;
@@ -95,7 +99,7 @@ z-index: -1;
 
 .card-1 {
   grid-area: card-one;
-  background-color: #FEBD2F;
+  background-color: var(--yellow);
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
   text-align: left;
@@ -144,12 +148,6 @@ z-index: -1;
   border-radius: 40px;
   height: 324px;
   width: 400px;
-}
-
-.card-4,
-.card-5,
-.card-6 {
-  margin-top: ;
 }
 
 .button {
@@ -204,7 +202,7 @@ grid-area: img-5;
 }
 
 footer {
-  background-color: #FEBD2F;
+  background-color: var(--yellow);
   height: 80px;
   width: 100%;
 }
