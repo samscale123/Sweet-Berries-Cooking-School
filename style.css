@@ -4,12 +4,16 @@
   --card-backgroung: #FFFFFF;
 }
 
-html,
-body {
+* {
   margin: 0;
   padding: 0;
+}
+
+html,
+body {
   box-sizing: border-box;
   background-color: var(--background-color);
+  height: auto;
 }
 
 h1 {
@@ -25,19 +29,19 @@ a {
 
 .container {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     height: 100%;
 }
 
 header {
-  height: 100px;
-  /* width: 100%; */
+  grid-area: header;
 }
 
 .nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
 }
 
 .nav-links{
@@ -45,36 +49,35 @@ header {
   gap:20px;
 }
 
-/* .nav a:nth-child(1) {
-margin-top: 10px;
-margin-left: 0px;
-}
-
-.nav a:nth-child(2) {
-  margin-top: 10px;
-  margin-left: 50px;
-}
-
-.nav img:nth-child(3) {
-  margin-left: 400px;
-  margin-top: 10px;
-} */
-
 .nav a:nth-child(4) {
   color: white;
   background-color: #000000;
   padding: 10px;
   border-radius: 15px;
-  /* margin-left: 40%;
-  margin-top: 10px; */
- 
 }
 
-.banner-grid-container {
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  gap: 20px;
-  width: 75%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 80px auto auto 80px;
+  grid-template-areas: 
+  "header header header"
+  "banner banner banner";
+}
+
+.banner-grid-container{
+  grid-area: banner;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows:auto;
+}
+
+.left-banner{
+  grid-column: 1/2;
+}
+
+.right-banner{
+  grid-column: 2/-1;
 }
 
 .text-1 {
@@ -87,21 +90,14 @@ margin-left: 0px;
   font-size: 24px;
 }
 
-.right-col {
-  margin-left: 200px;
-}
 
 .card-container {
-  margin-top: 100px;
   display: grid;
-  grid-template: auto / repeat(3, 33%);
-  grid-template-areas: "card-one card-two card-three"
-                        "card-four card-five card-six";
-gap: 80px 40px;
-justify-items: center;
-margin-top: 120px;
-margin-bottom: 200px;
-z-index: -1;
+  grid-template: auto / repeat(3, 1fr);
+  grid-template-areas: 
+  "card-one card-two card-three"
+  "card-four card-five card-six";
+  gap: 80px 40px;
 }
 
 .card-1 {
@@ -109,15 +105,12 @@ z-index: -1;
   background-color: var(--yellow);
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
-  text-align: left;
+
   padding: 40px;
   border-radius: 40px;
-  height: 324px;
-  width: 400px;
   font-size: 40px;
   font-weight: 500px;
   display: flex;
-  flex-shrink: 1;
 }
 
 .card-2 {
@@ -183,10 +176,6 @@ z-index: -1;
   margin-top: 20px;
 }
 
-.logo {
-  margin-top: 20px;
-}
-
 .img-1 {
 grid-area: img-1;
 }
@@ -207,11 +196,6 @@ grid-area: img-4;
 grid-area: img-5;
 }
 
-footer {
-  background-color: var(--yellow);
-  height: 80px;
-  width: 100%;
-}
 
 .symbol-container {
 position: relative;
@@ -226,4 +210,42 @@ float: left;
 position: absolute;
 left: 80%;
 bottom: 210%;
+}
+
+footer {
+  height: 10%;
+  background-color: var(--yellow);
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+@media screen and (max-width: 768px){
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+      "card-one card-two" 
+      "card-three card-four"
+      "card-five card-six";
+    }
+    .banner-grid-container{
+      grid-area: banner;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows:auto;
+    }
+    
+    .left-banner{
+      grid-column: 1;
+    }
+    
+    .right-banner{
+      grid-column: 1;
+    }
 }
