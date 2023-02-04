@@ -4,6 +4,9 @@
   --card-backgroung: #FFFFFF;
 }
 
+  
+
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +16,7 @@ html,
 body {
   box-sizing: border-box;
   background-color: var(--background-color);
-  height: auto;
+  height: 100%;
 }
 
 h1 {
@@ -39,7 +42,7 @@ header {
 
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
@@ -49,7 +52,7 @@ header {
   gap:20px;
 }
 
-.nav a:nth-child(4) {
+.nav a:nth-child(3) {
   color: white;
   background-color: #000000;
   padding: 10px;
@@ -104,8 +107,6 @@ header {
   grid-area: card-one;
   background-color: var(--yellow);
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
-
   padding: 40px;
   border-radius: 40px;
   font-size: 40px;
@@ -141,7 +142,6 @@ header {
 .card-6 {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
   text-align: left;
   background-color: white;
   padding: 40px;
@@ -152,11 +152,16 @@ header {
 .button {
   background-color: white;
   padding: 10px 25px;
-  text-align: left;
+  text-align: center;
   height: 30px;
   width: 80px;
   border-radius: 40px;
   border: 1px solid lightgray;
+}
+
+.card1-text {
+  font-size: 40px;
+  font-weight: 500px;
 }
 
 .heading-h3 {
@@ -166,6 +171,8 @@ header {
 
 .para {
  color: #646464;
+ font-size: 18px;
+ font-weight: 400;
 }
 
 .container1 {
@@ -215,6 +222,8 @@ bottom: 210%;
 footer {
   height: 10%;
   background-color: var(--yellow);
+  width: 100%;
+  margin-top: 10%;
 }
 
 .footer-flex {
@@ -225,7 +234,7 @@ footer {
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     .card-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -249,3 +258,52 @@ footer {
       grid-column: 1;
     }
 }
+
+@media screen and (max-width: 580px) {
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 80px auto auto 80px;
+    grid-template-areas: 
+    "header"
+    "banner";
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+    grid-template-areas: 
+    "card-one" 
+    "card-two" 
+    "card-three"
+    "card-four"
+    "card-five"
+    "card-six";
+  }
+
+  .banner-grid-container{
+    grid-area: banner;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows:auto;
+  }
+  
+  .left-banner{
+    grid-column: 1;
+  }
+  
+  .right-banner{
+    grid-column: 1;
+  }
+  .nav-links {
+    visibility: hidden;
+  }
+
+  .nav a:nth-child(3) {
+    visibility: hidden;
+  }
+
+}
+
