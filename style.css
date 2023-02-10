@@ -65,7 +65,9 @@ header {
   grid-template-rows: 80px auto auto 80px;
   grid-template-areas: 
   "header header header"
-  "banner banner banner";
+  "banner banner banner"
+  "card-container card-container card-container"
+  "footer footer footer";
 }
 
 .banner-grid-container{
@@ -95,12 +97,13 @@ header {
 
 
 .card-container {
+  grid-area: card-container;
   display: grid;
   grid-template: auto / repeat(3, 1fr);
   grid-template-areas: 
   "card-one card-two card-three"
   "card-four card-five card-six";
-  gap: 80px 40px;
+  gap: 80px;
 }
 
 .card-1 {
@@ -112,6 +115,7 @@ header {
   font-size: 40px;
   font-weight: 500px;
   display: flex;
+  width: 90%;
 }
 
 .card-2 {
@@ -140,13 +144,17 @@ header {
 .card-4,
 .card-5,
 .card-6 {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
+  /* grid-template-rows: repeat(3, 1fr); */
   text-align: left;
   background-color: white;
-  padding: 40px;
+  padding: 0 30px;
   border-radius: 40px;
-  height: 324px;
+  width: 90%;
+  justify-content: space-around;
+  position: relative;
+  /* height: 324px; */
 }
 
 .button {
@@ -204,10 +212,10 @@ grid-area: img-5;
 }
 
 
-.symbol-container {
+/* .symbol-container {
 position: relative;
 float: left;
-}
+} */
 
 .img-1,
 .img-2,
@@ -215,11 +223,12 @@ float: left;
 .img-4,
 .img-5 {
 position: absolute;
-left: 80%;
-bottom: 210%;
+right: 6%;
+top: -15%;
 }
 
 footer {
+  grid-area: footer;
   height: 10%;
   background-color: var(--yellow);
   width: 100%;
