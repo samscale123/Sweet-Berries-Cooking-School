@@ -12,6 +12,9 @@
 html {
   height: 100%;
 }
+body {
+  min-height: 100%;
+}
 
 html,
 body {
@@ -27,6 +30,10 @@ h1 {
 
 h2 {
   font-family: roboto serif;
+}
+
+.lines {
+  visibility: hidden;
 }
 
 a {
@@ -241,66 +248,138 @@ footer {
   height: 100%;
 }
 
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 800px) {
 
+  html {
+    height: 100%;
+  }
+
+  header {
+    grid-area: header;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 5%;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  
+  
+  .nav a:nth-child(3) {
+    color: white;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 80px auto auto auto 80px;
+    grid-template-rows: 80px auto auto 80px;
     grid-template-areas:
       "header header"
-      "banner"
-      "banner"
+      "banner" 
       "card-container card-container"
       "footer footer";
   }
-
-
-  .card-container {
-    height: 100%;
-    grid-area: card-container;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "card-one card-two"
-      "card-three card-four"
-      "card-five card-six";
-      gap: 18% 3%;
-  }
-
+  
   .banner-grid-container {
     grid-area: banner;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
+    grid-template-areas: 
+    "left-banner"
+    "right-banner";
+    grid-column: span 2;
+    justify-items: center;
   }
-
+  
   .left-banner {
-    grid-column: 1;
+    grid-area: left-banner;
+    width: 100%;
+    text-align: center;
   }
-
+  
   .right-banner {
-    grid-column: 1;
+    grid-area: right-banner;
+    justify-items: end;
+    margin: 0;
+    width: 100%;
   }
-
+  
+  .text-1 {
+    font-size: 64px;
+    text-align: center;
+    width: 90%;
+  }
+  
+  .text-2 {
+    color: #646464;
+    font-size: 24px;
+    width: 90%;
+  }
+  
+  .card-container {
+    grid-area: card-container;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "card-one card-two"
+      "card-three card-four" 
+      "card-five card-six";
+    gap: 7% 5%;
+    margin-top: 10%;
+  }
+  
+  .card-2 {
+    grid-area: card-two;
+  }
+  
+  .card-3 {
+    grid-area: card-three;
+  }
+  
+  .card-4 {
+    grid-area: card-four;
+  }
+  
+  .card-5 {
+    grid-area: card-five;
+  }
+  
+  .card-6 {
+    grid-area: card-six;
+  }
+  
   .card-1 {
     grid-area: card-one;
     background-color: var(--yellow);
     border-radius: 40px;
+    font-size: 40px;
     font-weight: 500;
     display: flex;
     padding: 30px 15px;
-    height: 100%;
     min-height: 0;
     min-width: 0;
     justify-content: center;
     align-items: center;
-    
-  }
-
-  .card1-text {
-    font-size: 30px;
-    font-weight: 500;
   }
   
   .card-2,
@@ -318,34 +397,80 @@ footer {
     padding: 30px 15px;
     min-height: 0;
     min-width: 0;
+  }
+  
+  .button {
+    background-color: white;
+    padding: 10px 25px;
+    text-align: center;
+    width: 80px;
+    border-radius: 40px;
+    border: 1px solid lightgray;
+    align-self: left;
+  }
+  
+  .card1-text {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  
+  .heading-h3 {
+    font-size: 24px;
+    font-family: Roboto Serif;
+  }
+  
+  .para {
+    color: #646464;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .img-1 {
+    grid-area: img-1;
+  }
+  
+  .img-2 {
+    grid-area: img-2;
+  }
+  
+  .img-3 {
+    grid-area: img-3;
+  }
+  
+  .img-4 {
+    grid-area: img-4;
+  }
+  
+  .img-5 {
+    grid-area: img-5;
+  }
+  
+  .img-1,
+  .img-2,
+  .img-3,
+  .img-4,
+  .img-5 {
+    position: absolute;
+    right: 6%;
+    top: -15%;
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: var(--yellow);
+    width: 100%;
+    position: relative;
+    bottom: 0%;
+    margin-top: 15%;
+  }
+  
+  .footer-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-}
-}
+  }
 
-.button {
-  background-color: white;
-  padding: 10px 25px;
-  text-align: center;
-  width: 80px;
-  border-radius: 40px;
-  border: 1px solid lightgray;
-  align-self: left;
-}
-
-footer {
-  grid-area: footer;
-  height: 10%;
-  background-color: var(--yellow);
-  width: 100%;
-  height: 100%;
-  /* margin-top: 10%; */
-}
-
-.footer-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 }
 
 
@@ -353,47 +478,202 @@ footer {
 
 
 @media screen and (max-width: 580px) {
+
+  header {
+    grid-area: header;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 5%;
+  }
+  .lines {
+    visibility: visible;
+    position: absolute;
+    right: 8%;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    visibility: hidden;
+  }
+  
+  .nav a:nth-child(3) {
+    visibility: hidden;
+  }
+  
+  
+  .nav a:nth-child(3) {
+    color: white;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  
   .grid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 80px auto auto 80px;
+    grid-template-rows: 80px auto auto 100px;
     grid-template-areas:
       "header"
-      "banner";
+      "banner"
+      "card-container"
+      "footer";
   }
-
-  .card-container {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    width: 100%;
-    grid-template-areas:
-      "card-one"
-      "card-two"
-      "card-three"
-      "card-four"
-      "card-five"
-      "card-six";
-  }
-
+  
   .banner-grid-container {
     grid-area: banner;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "left-banner"
+    "right-banner";
+    justify-items: center;
+    height: 100%;
   }
-
+  
   .left-banner {
-    grid-column: 1;
+    grid-area: left-banner;
+    text-align: center;
   }
-
+  
   .right-banner {
-    grid-column: 1;
+    grid-area: right-banner;
+    justify-items: end;
   }
-  .nav-links {
-    visibility: hidden;
+  
+  .text-1 {
+    font-size: 64px;
+    text-align: center;
+    width: 90%;
   }
+  
+  .text-2 {
+    color: #646464;
+    font-size: 24px;
+    width: 90%;
+  }
+  
+  .card-container {
+    grid-area: card-container;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 15% 28% 28% 28% 28% 28%;
+    grid-template-areas:
+      "card-one"
+      "card-two"
+      "card-three"
+      "card-four" 
+      "card-five"
+      "card-six";
+    gap: 7% 5%;
 
-  .nav a:nth-child(3) {
-    visibility: hidden;
   }
+  
+  .card-2 {
+    grid-area: card-two;
+  }
+  
+  .card-3 {
+    grid-area: card-three;
+  }
+  
+  .card-4 {
+    grid-area: card-four;
+  }
+  
+  .card-5 {
+    grid-area: card-five;
+  }
+  
+  .card-6 {
+    grid-area: card-six;
+  }
+  
+  .card-1 {
+    grid-area: card-one;
+    background-color: var(--yellow);
+    border-radius: 40px;
+    font-size: 40px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: white;
+    border-radius: 40px;
+    justify-content: space-around;
+    position: relative;
+  }
+  
+  .button {
+    background-color: white;
+    padding: 10px 25px;
+    text-align: center;
+    width: 80px;
+    border-radius: 40px;
+    border: 1px solid lightgray;
+    align-self: left;
+  }
+  
+  .card1-text {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .heading-h3 {
+    font-size: 24px;
+    font-family: Roboto Serif;
+  }
+  
+  .para {
+    color: #646464;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+
+  
+  .img-1,
+  .img-2,
+  .img-3,
+  .img-4,
+  .img-5 {
+    position: absolute;
+    right: 6%;
+    top: -15%;
+  }
+  
+  /* footer {
+      grid-area: footer;
+      background-color: var(--yellow);
+      bottom: 0px;
+      position: absolute;
+      height: 80px;
+      left: 0px;
+      right: 0px;
+      margin-bottom: 0px;
+    }
+
+    #wrapper {
+      height: 1000px;
+      position: relative;
+      margin-top: 30%;
+  } */
+
+
 }
