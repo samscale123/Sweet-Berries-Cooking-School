@@ -1,7 +1,7 @@
 :root {
-  --background-color: #F5F3EF;
-  --yellow: #FEBD2F;
-  --card-backgroung: #FFFFFF;
+  --background-color: #f5f3ef;
+  --yellow: #febd2f;
+  --card-backgroung: #ffffff;
 }
 
 * {
@@ -31,9 +31,9 @@ a {
 }
 
 .container {
-    margin: 0 auto;
-    width: 90%;
-    height: 100%;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
 }
 
 header {
@@ -45,12 +45,15 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  margin: 0 5%;
 }
 
-.nav-links{
+.nav-links {
   display: flex;
-  gap:20px;
+  gap: 20px;
 }
+
+
 
 .nav a:nth-child(3) {
   color: white;
@@ -63,11 +66,11 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 80px auto auto 80px;
-  grid-template-areas: 
-  "header header header"
-  "banner banner banner"
-  "card-container card-container card-container"
-  "footer footer footer";
+  grid-template-areas:
+    "header header header"
+    "banner banner banner"
+    "card-container card-container card-container"
+    "footer footer footer";
 }
 
 .banner-grid-container {
@@ -78,21 +81,20 @@ header {
   gap: 5%;
 }
 
-.left-banner{
+.left-banner {
   grid-column: 1/2;
-
 }
 
-.right-banner{
+.right-banner {
   grid-column: 2/-1;
   justify-items: end;
   margin: 0;
 }
 
 .text-1 {
-font-size: 64px;
-text-align: left;
-width: 90%;
+  font-size: 64px;
+  text-align: left;
+  width: 90%;
 }
 
 .text-2 {
@@ -101,21 +103,18 @@ width: 90%;
   width: 90%;
 }
 
-
 .card-container {
   grid-area: card-container;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: 
-  "card-one card-two card-three"
-  "card-four card-five card-six";
+  grid-template-areas:
+    "card-one card-two card-three"
+    "card-four card-five card-six";
   gap: 10% 2%;
   margin-bottom: 20%;
   height: 100%;
   margin: 0 3%;
 }
-
-
 
 .card-2 {
   grid-area: card-two;
@@ -147,7 +146,6 @@ width: 90%;
   padding: 30px 15px;
   min-height: 0;
   min-width: 0;
-
 }
 
 .card-2,
@@ -165,7 +163,6 @@ width: 90%;
   padding: 30px 15px;
   min-height: 0;
   min-width: 0;
-
 }
 
 .button {
@@ -181,7 +178,6 @@ width: 90%;
 .card1-text {
   font-size: 40px;
   font-weight: 500;
-
 }
 
 .heading-h3 {
@@ -190,29 +186,29 @@ width: 90%;
 }
 
 .para {
- color: #646464;
- font-size: 18px;
- font-weight: 400;
+  color: #646464;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .img-1 {
-grid-area: img-1;
+  grid-area: img-1;
 }
 
 .img-2 {
-grid-area: img-2;
+  grid-area: img-2;
 }
 
 .img-3 {
-grid-area: img-3;
+  grid-area: img-3;
 }
 
 .img-4 {
-grid-area: img-4;
+  grid-area: img-4;
 }
 
 .img-5 {
-grid-area: img-5;
+  grid-area: img-5;
 }
 
 .img-1,
@@ -220,9 +216,9 @@ grid-area: img-5;
 .img-3,
 .img-4,
 .img-5 {
-position: absolute;
-right: 6%;
-top: -15%;
+  position: absolute;
+  right: 6%;
+  top: -15%;
 }
 
 footer {
@@ -241,68 +237,67 @@ footer {
   height: 100%;
 }
 
-
-@media screen and (max-width: 800px){
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: 
-      "card-one card-two" 
+@media screen and (max-width: 800px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card-one card-two"
       "card-three card-four"
       "card-five card-six";
-    }
-    .banner-grid-container{
-      grid-area: banner;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows:auto;
-    }
-    
-    .left-banner{
-      grid-column: 1;
-    }
-    
-    .right-banner{
-      grid-column: 1;
-    }
+  }
+
+  .banner-grid-container {
+    grid-area: banner;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .left-banner {
+    grid-column: 1;
+  }
+
+  .right-banner {
+    grid-column: 1;
+  }
 }
 
 @media screen and (max-width: 580px) {
-
   .grid-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 80px auto auto 80px;
-    grid-template-areas: 
-    "header"
-    "banner";
+    grid-template-areas:
+      "header"
+      "banner";
   }
 
   .card-container {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     width: 100%;
-    grid-template-areas: 
-    "card-one" 
-    "card-two" 
-    "card-three"
-    "card-four"
-    "card-five"
-    "card-six";
+    grid-template-areas:
+      "card-one"
+      "card-two"
+      "card-three"
+      "card-four"
+      "card-five"
+      "card-six";
   }
 
-  .banner-grid-container{
+  .banner-grid-container {
     grid-area: banner;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows:auto;
+    grid-template-rows: auto;
   }
-  
-  .left-banner{
+
+  .left-banner {
     grid-column: 1;
   }
-  
-  .right-banner{
+
+  .right-banner {
     grid-column: 1;
   }
   .nav-links {
@@ -312,6 +307,4 @@ footer {
   .nav a:nth-child(3) {
     visibility: hidden;
   }
-
 }
-
