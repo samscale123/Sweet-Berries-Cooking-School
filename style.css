@@ -4,19 +4,19 @@
   --card-backgroung: #FFFFFF;
 }
 
-  
-
-
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
+  height: 100%;
 }
 
 html,
 body {
   box-sizing: border-box;
   background-color: var(--background-color);
-  height: 100%;
 }
 
 h1 {
@@ -70,53 +70,52 @@ header {
   "footer footer footer";
 }
 
-.banner-grid-container{
+.banner-grid-container {
   grid-area: banner;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows:auto;
+  margin: 0 3% 6% 3%;
+  gap: 5%;
 }
 
 .left-banner{
   grid-column: 1/2;
+
 }
 
 .right-banner{
   grid-column: 2/-1;
+  justify-items: end;
+  margin: 0;
 }
 
 .text-1 {
-  margin-top: 40px;
-  margin-bottom: 64px;
+font-size: 64px;
+text-align: left;
+width: 90%;
 }
 
 .text-2 {
   color: #646464;
   font-size: 24px;
+  width: 90%;
 }
 
 
 .card-container {
   grid-area: card-container;
   display: grid;
-  grid-template: auto / repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas: 
   "card-one card-two card-three"
   "card-four card-five card-six";
-  gap: 80px;
+  gap: 10% 2%;
+  margin-bottom: 20%;
+  height: 100%;
+  margin: 0 3%;
 }
 
-.card-1 {
-  grid-area: card-one;
-  background-color: var(--yellow);
-  grid-template-rows: repeat(3, 1fr);
-  padding: 40px;
-  border-radius: 40px;
-  font-size: 40px;
-  font-weight: 500px;
-  display: flex;
-  width: 90%;
-}
+
 
 .card-2 {
   grid-area: card-two;
@@ -138,6 +137,18 @@ header {
   grid-area: card-six;
 }
 
+.card-1 {
+  grid-area: card-one;
+  background-color: var(--yellow);
+  border-radius: 40px;
+  font-size: 40px;
+  font-weight: 500;
+  display: flex;
+  padding: 30px 15px;
+  min-height: 0;
+  min-width: 0;
+
+}
 
 .card-2,
 .card-3,
@@ -146,15 +157,15 @@ header {
 .card-6 {
   display: flex;
   flex-direction: column;
-  /* grid-template-rows: repeat(3, 1fr); */
   text-align: left;
   background-color: white;
-  padding: 0 30px;
   border-radius: 40px;
-  width: 90%;
   justify-content: space-around;
   position: relative;
-  /* height: 324px; */
+  padding: 30px 15px;
+  min-height: 0;
+  min-width: 0;
+
 }
 
 .button {
@@ -169,7 +180,8 @@ header {
 
 .card1-text {
   font-size: 40px;
-  font-weight: 500px;
+  font-weight: 500;
+
 }
 
 .heading-h3 {
@@ -181,14 +193,6 @@ header {
  color: #646464;
  font-size: 18px;
  font-weight: 400;
-}
-
-.container1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  margin-top: 20px;
 }
 
 .img-1 {
@@ -211,12 +215,6 @@ grid-area: img-4;
 grid-area: img-5;
 }
 
-
-/* .symbol-container {
-position: relative;
-float: left;
-} */
-
 .img-1,
 .img-2,
 .img-3,
@@ -232,7 +230,8 @@ footer {
   height: 10%;
   background-color: var(--yellow);
   width: 100%;
-  margin-top: 10%;
+  height: 100%;
+  margin-top: 3%;
 }
 
 .footer-flex {
