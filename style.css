@@ -22,7 +22,7 @@ h1 {
 }
 
 h2 {
-  font-family: roboto serif;
+  font-family: serif Roboto;
 }
 
 .lines {
@@ -74,8 +74,9 @@ header {
   display: flex;
   margin: 2% auto 6% auto;
   width: 90%;
-  gap: 5%;
+  /* gap: 5%; */
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .left-banner {
@@ -84,12 +85,13 @@ header {
 
 .main-img {
   max-width: 600px;
-  min-width: none;
+  min-width: auto;
   height: auto;
 }
 
 .right-banner {
   width: 50%;
+  flex-shrink: 1;
 }
 
 .text-1 {
@@ -145,7 +147,7 @@ header {
   border: 1px solid lightgray;
   align-self: left;
   width: 30%;
-  padding: 15px 0px;
+  padding: 10px 0px;
   font-size: 19px;
   font-weight: bold;
 }
@@ -212,14 +214,6 @@ footer {
   align-items: center;
   height: 100%;
 }
-
-
-
-
-
-
-
-
 
 
 @media screen and (max-width: 800px) {
